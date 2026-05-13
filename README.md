@@ -69,23 +69,10 @@ Verify the CLI is available before using the extension:
 sg --version
 ```
 
-The package targets the [`pi`](https://github.com/badlogic/pi-mono/tree/main/packages/coding-agent) coding agent. Pi loads extensions from `~/.pi/agent/extensions/`, project `.pi/extensions/`, or via the `--extension` / `-e` CLI flag.
-
-Pick whichever route fits:
+The package targets the [`pi`](https://github.com/earendil-works/pi-mono/tree/main/packages/coding-agent) coding agent. Pi loads extensions from `~/.pi/agent/extensions/`, project `.pi/extensions/`, or via the `--extension` / `-e` CLI flag.
 
 ```bash
-# 1. From npm (once published)
-pi install npm:@code-yeongyu/pi-ast-grep
-
-# 2. From git (once the repository is pushed)
-pi install git:github.com/code-yeongyu/pi-ast-grep
-
-# 3. Manual placement (always works)
-git clone https://github.com/code-yeongyu/pi-ast-grep ~/.pi/agent/extensions/pi-ast-grep
-cd ~/.pi/agent/extensions/pi-ast-grep && npm install
-
-# 4. Dev / one-shot test
-pi -e /path/to/pi-ast-grep/src/index.ts
+pi install git:github.com/fu5ha/pi-ast-grep
 ```
 
 After installation, restart pi (or run `/reload` inside an interactive session). Both tools register automatically and become callable by the LLM.
@@ -162,7 +149,7 @@ When you genuinely want text search, use the built-in `grep` tool instead.
 ## Development
 
 ```bash
-git clone https://github.com/code-yeongyu/pi-ast-grep
+git clone https://github.com/fu5ha/pi-ast-grep
 cd pi-ast-grep
 npm install            # install dev + peer dependencies
 npm test               # run vitest
